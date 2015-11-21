@@ -1,0 +1,31 @@
+{
+  "name": "dinote",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "jade": "~1.11.0",
+    "mongo": "^0.1.0",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0"
+  },
+  "description": "Modernized field notes",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhaker/react-native-control-flashlight-ios.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rhaker/react-native-control-flashlight-ios/issues"
+  },
+  "homepage": "https://github.com/rhaker/react-native-control-flashlight-ios#readme"
+}

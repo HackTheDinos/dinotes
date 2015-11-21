@@ -1,0 +1,19 @@
+{
+  "name": "dinote",
+  "homepage": "https://github.com/HackTheDinos/dinotes",
+  "authors": [
+    "AMNH"
+  ],
+  "description": "Modernized field notes",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
