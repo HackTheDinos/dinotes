@@ -16,7 +16,7 @@ var {
 var Dinotes = React.createClass({
   render: function() {
     return (
-      <WebView url="http://google.com" />
+      <WebView url="http://10.20.65.3:3000/" />
     );
   }
 });
