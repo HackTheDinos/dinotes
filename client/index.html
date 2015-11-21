@@ -3,21 +3,63 @@
 <head>
     <title>DiNotes</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link href="./css/main.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+
     <nav class="light-green darken-2">
         <div class="nav-wrapper">
             <a href="#" class="brand-logo">DiNotes</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="something.html">Link</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
                 <li><a href="something.html">Link</a></li>
             </ul>
         </div>
     </nav>
-    Hello! This is DiNotes!
+    <div class="row" style="height: 90%;">
+        <div class="col s8" style="height:100%">
+            <div class="row" style="height:100%">
+                <div class="col s12">
+                    <ul class="tabs">
+                        <li class="tab col s3"><a href="#doc-spec">Document Specimens</a></li>
+                        <li class="tab col s3"><a href="#test2">Excavation Site Map</a></li>
+                        <li class="tab col s3 disabled"><a href="#test3">Resources & Team</a></li>
+                    </ul>
+                </div>
+                <div id="doc-spec" class="col s12">
+                    <div class="row" id="doc-spec-new">
+                        <div class="card" style="height:100%">
+                            <span class="card-title black-text">Document a New Specimen</span>
+                        </div>
+                    </div>
+                
+                    <div class="row" id="doc-spec-info">
+                        <div class="card" style="height:100%">
+                            <span class="card-title black-text">Specimen Name</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="test2" class="col s12">Excavation Site Map</div>
+                <div id="test3" class="col s12">Resources &amp; Team</div>
+            </div>
+        </div>
+
+        <div class="col s4">
+            Checklist
+            <div class="card">
+               Checklist item 1 
+            </div>
+        </div>
+
+    </div>
+
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

@@ -1,3 +1,21 @@
-.thing {
-    
+html, body {
+    height: 100%;
+}
+
+
+.tabs {
+    /*color: red;*/
+}
+
+#doc-spec {
+    height: 90%;
+    position: relative;
+}
+
+#doc-spec-new {
+    height: 15%;
+}
+
+#doc-spec-info {
+    height: 85%;
 }
