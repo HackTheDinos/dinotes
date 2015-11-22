@@ -6,6 +6,7 @@ h5 {
     text-transform: uppercase !important;
     letter-spacing: .8px !important; 
     color: #689f38 !important;
+    font-weight: 300 !important;
 }
 
 /*    Tabs    */
