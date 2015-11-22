@@ -3,33 +3,44 @@ html, body {
 }
 
 
-.tabs {
-    /*color: red;*/
+/*    Tabs    */
+.tabs, .tab a {
+    color: #689f38 !important;
+}
+.disabled a{
+    color: #c5e1a5 !important;
 }
 
-#doc-spec {
+.indicator {
+    background-color: #689f38 !important;
+}
+
+
+/*    Specimens tab    */
+#spec {
     height: 90%;
     position: relative;
 }
 
-.doc-spec-new {
+.spec-new {
 }
 
-.doc-spec-entry {
+.spec-entry {
 }
 
-.doc-spec-entry-info {
+.spec-entry-info {
 }
 
-.doc-spec-entry-photos {
+.spec-entry-photos {
 }
 
-.doc-spec-entry-photo {
+.spec-entry-photo {
     height: 100px;
     width: 100px;
+    padding: 6px;
 }
 
-.doc-spec-entry-notes {
+.spec-entry-notes {
 }
 
 
