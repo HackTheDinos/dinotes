@@ -40,7 +40,7 @@
                 <div class="col s12">
                     <ul class="tabs">
                         <li class="tab col s3"><a  href="#spec">Specimens</a></li>
-                        <li class="tab col s3"><a href="#test2">Excavation Site Map</a></li>
+                        <li class="tab col s3" onClick="hideChecklist()"><a href="#test2">Excavation Site Map</a></li>
                         <li class="tab col s3 disabled"><a href="#test3">Resources & Team</a></li>
                     </ul>
                 </div>
@@ -176,7 +176,7 @@
             </div>
         </div>
 
-        <div class="col s0 m0 l4 hide-on-med-and-down">
+        <div class="col s0 m0 l4 hide-on-med-and-down" id="checklist">
             <h5>Checklist</h5>
             <div class="card">
                 <div class="card-content">
@@ -232,6 +232,9 @@
                 google.maps.event.trigger(map, "resize");
                 map.setCenter(center); 
             });
+        }
+        function hideChecklist() {
+            document.getElementById('checklist').style.display = 'none';
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY_HERE&callback=initMap">
