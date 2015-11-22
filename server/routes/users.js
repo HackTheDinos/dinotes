@@ -120,4 +120,36 @@ router.get('/create', function(req, res, next) {
     });
 });
 
+router.get('/tasks', function(req, res, next) {
+    if(db == null) {
+        res.status(500);
+        res.send("No mongo connection, please try again later");
+        return;
+    }
+    if(!req.session.user) {
+        res.status(401);
+        res.send("Not logged in");
+        return;
+    }
+    users.findOne({'user': req.session.user}, function(err, docs) {
+        res.send(docs.tasks);
+    });
+});
+
+router.put('/tasks', function(req, res, next) {
+    if(db == null) {
+        res.status(500);
+        res.send("No mongo connection, please try again later");
+        return;
+    }
+    if(!req.session.user) {
+        res.status(401);
+        res.send("Not logged in");
+        return;
+    }
+    users.findAndModify({'user': req.session.user}, {$set: {'tasks': req.body}}, function(err, result) {
+        res.send(result);
+    });
+});
+
 module.exports = router;
