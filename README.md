@@ -5,35 +5,39 @@
 ### [Try it out here!](http://dinotes.jagels.io/) *Must be on the "Hack the Dino's" wi-fi*
 ---
 ## DINOTE is built with
+
 #### Front End
 - Materialize.css
 - JQuery
 - Bower
+
 #### Back End
 - Node.js
 - MongoDB
 - Redis
+
 #### Design
 - Adobe Illustrator
+
 ---
 ## Design Mockups
 ### Desktop
-![](./assets/desktop/DINOTE-01.png=250x?raw=true)
-![](./assets/desktop/DINOTE-10.png=250x?raw=true)
-![](./assets/desktop/DINOTE-11.png=250x?raw=true)
-![](./assets/desktop/DINOTE-12.png=250x?raw=true)
-![](./assets/desktop/DINOTE-13.png=250x?raw=true)
+<img src="assets/desktop/DINOTE-01.png" width=200px">
+<img src="assets/desktop/DINOTE-10.png" width=200px">
+<img src="assets/desktop/DINOTE-11.png" width=200px">
+<img src="assets/desktop/DINOTE-12.png" width=200px">
+<img src="assets/desktop/DINOTE-13.png" width=200px">
 ### Mobile
-![](./assets/mobile/Home_drawer_expeditions.png=50x?raw=true)
-![](./assets/mobile/Home_drawer_tasks.png=50x?raw=true)
-![](./assets/mobile/Home_specimens.png=50x?raw=true)
-![](./assets/mobile/Home_specimens_new.png=50x?raw=true)
-![](./assets/mobile/Open_Log_In.png=50x?raw=true)
-![](./assets/mobile/Open_Register.png=50x?raw=true)
-![](./assets/mobile/Tab_Resources.png=50x?raw=true)
-![](./assets/mobile/Tab_Resources_upload.png=50x?raw=true)
-![](./assets/mobile/Tab_Resources_View.png=50x?raw=true)
-![](./assets/mobile/Tab_sitemap.png=50x?raw=true)
+<img src="assets/mobile/Home_drawer_expeditions.png" width=100px">
+<img src="assets/mobile/Home_drawer_tasks.png" width=100px">
+<img src="assets/mobile/Home_specimens.png" width=100px">
+<img src="assets/mobile/Home_specimens_new.png" width=100px">
+<img src="assets/mobile/Open_Log_In.png" width=100px">
+<img src="assets/mobile/Open_Register.png" width=100px">
+<img src="assets/mobile/Tab_Resources.png" width=100px">
+<img src="assets/mobile/Tab_Resources_upload.png" width=100px">
+<img src="assets/mobile/Tab_Resources_View.png" width=100px">
+<img src="assets/mobile/Tab_sitemap.png" width=100px">
 ---
 ## The Team
 Hacker|Representing|Worked on
