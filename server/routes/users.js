@@ -20,7 +20,6 @@ MongoClient.connect(url, function(err, database) {
     }
 });
 
-/* GET users listing. */
 router.get('/login', function(req, res, next) {
     if(db == null) {
         res.status(500);
