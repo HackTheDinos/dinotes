@@ -12,10 +12,24 @@ html, body {
     position: relative;
 }
 
-#doc-spec-new {
-    height: 15%;
+.doc-spec-new {
 }
 
-#doc-spec-info {
-    height: 85%;
+.doc-spec-entry {
 }
+
+.doc-spec-entry-info {
+}
+
+.doc-spec-entry-photos {
+}
+
+.doc-spec-entry-photo {
+    height: 100px;
+    width: 100px;
+}
+
+.doc-spec-entry-notes {
+}
+
+

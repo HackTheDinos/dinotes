@@ -5,7 +5,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href="./css/main.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
@@ -33,14 +33,35 @@
                 </div>
                 <div id="doc-spec" class="col s12">
                     <div class="row" id="doc-spec-new">
-                        <div class="card" style="height:100%">
-                            <span class="card-title black-text">Document a New Specimen</span>
+                        <div class="card">
+                            <div class="card-content">
+                                <span class="card-title black-text">Document a New Specimen</span>
+                                <div class="input-field">
+                                    <input placeholder="Tyrannosaurus rex" type="text" id="new-spec-name">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 
-                    <div class="row" id="doc-spec-info">
+                    <div class="row doc-spec-entry">
                         <div class="card" style="height:100%">
-                            <span class="card-title black-text">Specimen Name</span>
+                            <div class="card-content">
+                                <span class="card-title black-text">Specimen Name</span>
+                                <div class="doc-spec-entry-info">
+                                    Time
+                                    Date
+                                    Location: 60 Lat 170 Long (see on map)
+                                </div>
+                                <div class="doc-spec-entry-photos">
+                                    <img class="doc-spec-entry-photo" src="./pics/german dinosaur.jpg">
+                                    <img class="doc-spec-entry-photo" src="./pics/german dinosaur.jpg">
+                                    <img class="doc-spec-entry-photo" src="./pics/german dinosaur.jpg">
+                                    <img class="doc-spec-entry-photo" src="./pics/german dinosaur.jpg">
+                                </div>
+                                <div class="doc-spec-entry-notes">
+                                Puertasaurus Chuanjiesaurus Symphyrophus Bistahieversor Saurornithoides Pneumatoraptor Rinchenia Ampelosaurus Eosinopteryx Nodocephalosaurus Valdoraptor Genusaurus Nemegtosaurus Huabeisaurus Syngonosaurus Leptoceratops Hypsirophus Denversaurus Szechuanosaurus Pteropelyx Therizinosaurus Arstanosaurus Cylindricodon Scutellosaurus Traukutitan Sphaerotholus Brachylophosaurus Anserimimus Jaxartosaurus Vitakrisaurus Atacamatitan Variraptor Krzyzanowskisaurus Archaeornithoides Barilium Sanpasaurus Nipponosaurus Leyesaurus Tianyuraptor Gigantosaurus Utahceratops Borogovia Australovenator Polyodontosaurus Allosaurus Dashanpusaurus Clepsysaurus Gasosaurus Chialingosaurus Ruyangosaurus Hexing Vitakridrinda Dyoplosaurus Phyllodon Sauraechinodon Calamosaurus Nigersaurus Adamantisaurus Pterospondylus Petrobrasaurus Shuvuuia Pekinosaurus Kuszholia Ignavusaurus Cerasinops Jinzhousaurus Carnotaurus Laosaurus Appalachiosaurus Hypsibema Koreaceratops Quaesitosaurus Hallopus Scipionyx Chirostenotes
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -50,16 +71,27 @@
         </div>
 
         <div class="col s4">
-            Checklist
+            <h3>Checklist</h3>
             <div class="card">
-               Checklist item 1 
+                <div class="card-content">
+                    <form action="#">
+                        <p>
+                            <input type="checkbox" id="testbox1"/>
+                            <label for="testbox1">Add node modules to .gitignore!!!</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" class="filled-in" id="filled-in-box"/>
+                            <label for="filled-in-box">sudo apt-get purge emacs</label>
+                        </p>
+                    </form>
+                </div>
             </div>
         </div>
 
     </div>
 
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
 </body>
 </html>
