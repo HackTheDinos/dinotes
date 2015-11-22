@@ -33,8 +33,7 @@ router.get('/note/:id', function(req, res, next) {
 });
 
 /*
- * Provide note as 'note' in query.
- * Provide images as 'imgs'
+ * Provide raw JSON to be inserted into contents
  */
 router.post('/new', function(req, res, next) {
     if(!req.session.user) {
