@@ -190,26 +190,26 @@
             <h5>Checklist</h5>
             <div class="card">
                 <div class="card-content">
-                    <div class="input-field">
-                        <input type="text">
-                        <label for"">New Task</label>
-                    </div>
-                    <form action="#">
+                    <form name="checklist" onsubmit="addNewChecklistItem($('#newItem').val()); return false;">
+                        <div class="input-field">
+                            <input type="text" id="newItem">
+                            <label for"">New Task</label>
+                        </div>
+                        <div id="list">
                             <p>
                                 <input type="checkbox" class="filled-in" id="check1"/>
-                                <label for="check1">Add node modules to .gitignore!!! </label>
-                                <span class="badge">Added 6/7/15 6:00PM</span>
+                                <label for="check1">Set GPS coordinates</label>
+                                <span class="new badge"></span>
                             </p>
                             <p>
                                 <input type="checkbox" class="filled-in" id="check2"/>
-                                <label for="check2">sudo apt-get purge emacs</label>
-                                <span class="new badge">Added 6/7/15 7:00PM</span>
+                                <label for="check2">Double-check medications</label>
                             </p>
                             <p>
                                 <input type="checkbox" class="filled-in" id="check3"/>
-                                <label for="check3">alias emacs='vim'</label>
-                                <span class="new badge">Added 6/7/15 7:00PM</span>
+                                <label for="check3">Restock med kit</label>
                             </p>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -245,12 +245,16 @@
     <script src="./js/server-speak.js"></script>
 
     <script type="text/javascript">
+
+        function addNewChecklistItem(item) {
+            $( "#list" ).prepend( "<p><input type='checkbox' class='filled-in' id='check2'/><label for='check2'>" + item + "</label><span class='new badge'></span></p>");
+        }
+
         var map;
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
-                center: {
-                    lat: -34.397, lng: 150.644},
-                    zoom: 8
+                zoom: 8,
+                center: {lat: -34.397, lng: 150.644}
                 });
             // Resize stuff...
             google.maps.event.addDomListener(window, "resize", function() {
@@ -262,6 +266,7 @@
         function hideChecklist() {
             document.getElementById('checklist').style.display = 'none';
         }
+
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApx5EouvLrMRqKDo9Ds5XLC9zXUzAyZmw&callback=initMap">
     </script>
