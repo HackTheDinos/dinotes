@@ -43,6 +43,10 @@ h5 {
 .spec-entry {
 }
 
+.spec-entry-subtitle {
+    
+}
+
 .spec-entry-info {
 }
 
@@ -61,6 +65,12 @@ h5 {
     padding: 6px;
 }
 
+.spec-entry-photo-big {
+    display: inline !important;
+    height: 300px;
+    width: 300px;
+    padding: 6px;
+}
 .spec-entry-notes {
 }
 
