@@ -246,8 +246,11 @@
 
     <script type="text/javascript">
 
+        var checklistI = 4;
+
         function addNewChecklistItem(item) {
-            $( "#list" ).prepend( "<p><input type='checkbox' class='filled-in' id='check2'/><label for='check2'>" + item + "</label><span class='new badge'></span></p>");
+            $( "#list" ).prepend( "<p><input type='checkbox' class='filled-in' id='check" + checklistI + "'/><label for='check" + checklistI + "'>" + item + "</label><span class='new badge'></span></p>");
+            checklistI++;
         }
 
         var map;
