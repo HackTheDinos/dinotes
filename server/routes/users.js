@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var session = require('express-session');
 var MongoClient = require('mongodb').MongoClient;
+var ObjectID = require('mongodb').ObjectID;
 var async = require('async');
 var bcrypt = require('bcrypt');
 
@@ -147,8 +148,10 @@ router.put('/tasks', function(req, res, next) {
         res.send("Not logged in");
         return;
     }
-    users.findAndModify({'user': req.session.user}, {$set: {'tasks': req.body}}, function(err, result) {
-        res.send(result);
+    users.findOne({'user': req.session.user}, function(err, docs) {
+        users.updateOne({'_id': docs['_id']}, {$set: {'tasks': req.body}}, function(err, result) {
+            res.send(result);
+        });
     });
 });
 
