@@ -2,6 +2,11 @@ html, body {
     height: 100%;
 }
 
+h5 {
+    text-transform: uppercase !important;
+    letter-spacing: .8px !important; 
+    color: #689f38 !important;
+}
 
 /*    Tabs    */
 .tabs, .tab a {
@@ -17,6 +22,15 @@ html, body {
 
 
 /*    Specimens tab    */
+
+.doc-new-spec {
+    
+}
+
+.collapsible-header {
+    border-bottom: 0px !important;
+}
+
 #spec {
     height: 90%;
     position: relative;
@@ -32,9 +46,15 @@ html, body {
 }
 
 .spec-entry-photos {
+    display: inline;
+}
+
+.material-placeholder {
+    display: inline;
 }
 
 .spec-entry-photo {
+    display: inline !important;
     height: 100px;
     width: 100px;
     padding: 6px;

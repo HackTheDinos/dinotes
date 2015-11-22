@@ -18,11 +18,25 @@
             </ul>
             <ul class="side-nav" id="mobile-demo">
                 <li><a href="something.html">Link</a></li>
+                        
+                <p>
+                    <input type="checkbox" class="filled-in" id="testbox1"/>
+                    <label for="testbox1">Add node modules to .gitignore!!! </label>
+                </p> 
+                <p>
+                    <input type="checkbox" class="filled-in" id="filled-in-box"/>
+                    <label for="filled-in-box">sudo apt-get purge emacs</label>
+                </p>
+                <p>
+                    <input type="checkbox" class="filled-in" id="check3"/>
+                    <label for="check3">alias emacs='vim'</label>
+                </p>
+
             </ul>
         </div>
     </nav>
     <div class="row" style="height: 90%; margin-top:1%;">
-        <div class="col s8" style="height:100%">
+        <div class="col s12 m12 l8" style="height:100%">
             <div class="row" style="height:100%">
                 <div class="col s12">
                     <ul class="tabs">
@@ -33,14 +47,40 @@
                 </div>
                 <div id="spec" class="col s12">
                     <div class="row" id="spec-new">
+                        <!--
                         <div class="card">
                             <div class="card-content">
-                                <span class="card-title black-text">Document a New Specimen</span>
-                                <div class="input-field">
-                                    <input placeholder="Tyrannosaurus rex" type="text" id="new-spec-name">
-                                </div>
+                            -->
+                                <ul class="collapsible collapsible-accordion" data-collapsible="accordion" >
+                                    <li>
+                                        <div class="collapsible-header">
+                                            <h5>Document a New Specimen</h5>
+                                            <div class="input-field">
+                                                <input placeholder="Tyrannosaurus rex" type="text" id="new-spec-name">
+                                            </div>
+                                        </div>
+                                        <div class="doc-new-spec collapsible-body">
+                                            oadsijfoasijdf
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            saoifdjaosifdj
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!--
                             </div>
                         </div>
+                        -->
                     </div>
                 
                     <div class="row spec-entry">
@@ -53,10 +93,10 @@
                                     Location: 60 Lat 170 Long (see on map)
                                 </div>
                                 <div class="spec-entry-photos">
-                                    <img class="spec-entry-photo" src="./pics/german dinosaur.jpg">
-                                    <img class="spec-entry-photo" src="./pics/german dinosaur.jpg">
-                                    <img class="spec-entry-photo" src="./pics/german dinosaur.jpg">
-                                    <img class="spec-entry-photo" src="./pics/german dinosaur.jpg">
+                                    <img class="spec-entry-photo materialboxed" src="./pics/german dinosaur.jpg">
+                                    <img class="spec-entry-photo materialboxed" src="./pics/german dinosaur.jpg">
+                                    <img class="spec-entry-photo materialboxed" src="./pics/german dinosaur.jpg">
+                                    <img class="spec-entry-photo materialboxed" src="./pics/german dinosaur.jpg">
                                 </div>
                                 <div class="spec-entry-notes">
                                 Puertasaurus Chuanjiesaurus Symphyrophus Bistahieversor Saurornithoides Pneumatoraptor Rinchenia Ampelosaurus Eosinopteryx Nodocephalosaurus Valdoraptor Genusaurus Nemegtosaurus Huabeisaurus Syngonosaurus Leptoceratops Hypsirophus Denversaurus Szechuanosaurus Pteropelyx Therizinosaurus Arstanosaurus Cylindricodon Scutellosaurus Traukutitan Sphaerotholus Brachylophosaurus Anserimimus Jaxartosaurus Vitakrisaurus Atacamatitan Variraptor Krzyzanowskisaurus Archaeornithoides Barilium Sanpasaurus Nipponosaurus Leyesaurus Tianyuraptor Gigantosaurus Utahceratops Borogovia Australovenator Polyodontosaurus Allosaurus Dashanpusaurus Clepsysaurus Gasosaurus Chialingosaurus Ruyangosaurus Hexing Vitakridrinda Dyoplosaurus Phyllodon Sauraechinodon Calamosaurus Nigersaurus Adamantisaurus Pterospondylus Petrobrasaurus Shuvuuia Pekinosaurus Kuszholia Ignavusaurus Cerasinops Jinzhousaurus Carnotaurus Laosaurus Appalachiosaurus Hypsibema Koreaceratops Quaesitosaurus Hallopus Scipionyx Chirostenotes
@@ -70,19 +110,24 @@
             </div>
         </div>
 
-        <div class="col s4">
-            <h5 style="text-transform: uppercase;letter-spacing: .8px; color:#689f38;">Checklist</h5>
+        <div class="col s0 m0 l4 hide-on-med-and-down">
+            <h5>Checklist</h5>
             <div class="card">
                 <div class="card-content">
                     <form action="#">
                             <p>
-                                <input type="checkbox" class="filled-in" id="testbox1"/>
-                                <label for="testbox1">Add node modules to .gitignore!!! </label>
+                                <input type="checkbox" class="filled-in" id="check1"/>
+                                <label for="check1">Add node modules to .gitignore!!! </label>
                                 <span class="badge">Added 6/7/15 6:00PM</span>
                             </p> 
                             <p>
-                                <input type="checkbox" class="filled-in" id="filled-in-box"/>
-                                <label for="filled-in-box">sudo apt-get purge emacs</label>
+                                <input type="checkbox" class="filled-in" id="check2"/>
+                                <label for="check2">sudo apt-get purge emacs</label>
+                                <span class="new badge">Added 6/7/15 7:00PM</span>
+                            </p>
+                            <p>
+                                <input type="checkbox" class="filled-in" id="check3"/>
+                                <label for="check3">alias emacs='vim'</label>
                                 <span class="new badge">Added 6/7/15 7:00PM</span>
                             </p>
                     </form>
