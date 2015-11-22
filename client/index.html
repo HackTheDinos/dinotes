@@ -55,7 +55,7 @@
                                         <div class="collapsible-header">
                                             <h5>Document a New Specimen</h5>
                                             <div class="input-field">
-                                                 <input class="speciman-card-input"<input placeholder="Tyrannosaurus rex" type="text" id="speciman-caspeciman-name">
+                                                 <input class="speciman-card-input"<input placeholder="Tyrannosaurus rex" type="text" id="speciman-card-speciman-name">
                                             </div>
                                         </div>
                                         <div class="row doc-new-spec collapsible-body">
@@ -68,18 +68,18 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="input-field col s6">
-                                                        <input class="speciman-card-input" id="speciman-card-latitude" type="text">
+                                                        <input class="speciman-card-input" id="speciman-card-latitude" type="number">
                                                         <label for="">Latitude</label>
                                                     </div>
                                                     <div class="input-field col s6">
-                                                        <input class="speciman-card-input" id="speciman-card-longitude" type="text">
+                                                        <input class="speciman-card-input" id="speciman-card-longitude" type="number">
                                                         <label for="">Longitude</label>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="input-field col s6">
-                                                        <input class="speciman-card-input" id="speciman-card-date-collected" type="text">
-                                                        <label for="">Date Collected</label>
+                                                        <input class="speciman-card-input" id="speciman-card-date-collected" type="date">
+                                                        <!-- <label for="">Date Collected</label> -->
                                                     </div>
                                                     <div class="input-field col s6">
                                                         <input class="speciman-card-input" id="speciman-card-collector-name" type="text">
@@ -111,6 +111,9 @@
                             </div>
                         </div>
                         -->
+                    </div>
+
+                    <div id="loaded-speciman-cards">
                     </div>
 
                     <div class="row spec-entry">
@@ -213,8 +216,9 @@
       window.Hammer = require('./bower_components/Materialize/js/hammer.min.js');
     </script>
     <!--  For Normal Broswers -->
-    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/Materialize/dist/js/materialize.min.js"></script>
+    <script src="bower_components/mustache.js/mustache.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/server-speak.js"></script>
 
@@ -230,7 +234,7 @@
             google.maps.event.addDomListener(window, "resize", function() {
                 var center = map.getCenter();
                 google.maps.event.trigger(map, "resize");
-                map.setCenter(center); 
+                map.setCenter(center);
             });
         }
         function hideChecklist() {
