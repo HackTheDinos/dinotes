@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Dinotes</title>
@@ -40,7 +40,7 @@
                 <div class="col s12">
                     <ul class="tabs">
                         <li class="tab col s3"><a  href="#spec">Specimens</a></li>
-                        <li class="tab col s3"><a href="#test2">Excavation Site Map</a></li>
+                        <li class="tab col s3" onClick="hideChecklist()"><a href="#test2">Excavation Site Map</a></li>
                         <li class="tab col s3 disabled"><a href="#test3">Resources & Team</a></li>
                     </ul>
                 </div>
@@ -167,12 +167,16 @@
                         </div>
                     </div>
                 </div>
-                <div id="test2" class="col s12">Excavation Site Map</div>
+
+                <div id="test2" class="col s12">
+                    <div id="map" class="card"></div>
+                </div>
+
                 <div id="test3" class="col s12">Resources &amp; Team</div>
             </div>
         </div>
 
-        <div class="col s0 m0 l4 hide-on-med-and-down">
+        <div class="col s0 m0 l4 hide-on-med-and-down" id="checklist">
             <h5>Checklist</h5>
             <div class="card">
                 <div class="card-content">
@@ -213,5 +217,27 @@
     <script src="bower_components/Materialize/dist/js/materialize.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/server-speak.js"></script>
+
+    <script type="text/javascript">
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: -34.397, lng: 150.644},
+                    zoom: 8
+                });
+            // Resize stuff...
+            google.maps.event.addDomListener(window, "resize", function() {
+                var center = map.getCenter();
+                google.maps.event.trigger(map, "resize");
+                map.setCenter(center); 
+            });
+        }
+        function hideChecklist() {
+            document.getElementById('checklist').style.display = 'none';
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY_HERE&callback=initMap">
+    </script>
 </body>
 </html>
