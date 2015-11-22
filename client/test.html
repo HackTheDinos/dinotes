@@ -37,7 +37,9 @@
                   setLocalId();
                }
                newCard.specimanCardId = updateLocalId();
+               newCard.image = URL.createObjectURL(event.target.files[0]);
                console.log(newCard);
+               console.warn( $.post("/notes/new", newCard,"json") );
 
                if (localStorage.getItem('testing') === null) {
                   localStorage.setItem('testing', URL.createObjectURL(event.target.files[0]));
