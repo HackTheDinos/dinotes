@@ -7,8 +7,9 @@ $('.submit-speciman-card').click(function submitSpeciman() {
 
 $('.dino-reg-login').click(function login() {
    var userInfo = getAllFields('.dino-reg-login-input');
-   $.get('users/create', userInfo);
-   window.setTimeOut($.get('users/login', userInfo), 1000);
+   $.get('users/create', userInfo, function() {
+      $.get('users/login', userInfo);
+   });
 
 });
 
