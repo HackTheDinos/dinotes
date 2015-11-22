@@ -1,6 +1,14 @@
 $('.submit-speciman-card').click(function submitSpeciman() {
    var newCardObject = getAllFields('.speciman-card-input');
-   $.post('/notes/new', newCardObject, 'json');
+
+   var file = document.getElementById('speciman-card-img').files[0]; //Files[0] = 1st file
+   var reader = new FileReader();
+   reader.readAsDataURL(file);
+   reader.onload = function(event) {
+      var dataURL = reader.result;
+      newCardObject.img = dataURL;
+      $.post('/notes/new', newCardObject, 'json');
+   };
 
    location.reload();
 });
