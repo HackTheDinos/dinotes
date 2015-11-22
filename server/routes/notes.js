@@ -234,8 +234,17 @@ router.get('/mine', function(req, res, next) {
     }
     users.findOne({'user': req.session.user}, function(err, usr) {
         notes.find({$or: [{'owner': ObjectID(usr['_id'])}, { collaborators: {$in: [usr['_id']]}}]}).toArray(function(err, docs) {
-            //console.log(docs);
-            res.send(docs);
+            var owned = [];
+            var shared = [];
+            for(var d in docs) {
+                if(docs[d].owner == usr['_id'].toString()) {
+                    owned.push(docs[d]);
+                }
+                else {
+                    shared.push(docs[d]);
+                }
+            }
+            res.send({'owned': owned, 'shared': shared});
         });
     });
 });
