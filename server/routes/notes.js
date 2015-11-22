@@ -27,9 +27,15 @@ router.get('/note/:id', function(req, res, next) {
         res.send("No mongo connection, please try again later");
         return;
     }
-    notes.findOne({'_id': ObjectID(req.params.id)}, function(err, docs) {
-        res.send(docs);
-    });
+    try {
+        notes.findOne({'_id': ObjectID(req.params.id)}, function(err, docs) {
+            res.send(docs);
+        });
+    }
+    catch(e) {
+        res.status(500);
+        res.send(e);
+    }
 });
 
 /*
@@ -49,6 +55,9 @@ router.post('/new', function(req, res, next) {
     async.waterfall([
         function(callback) {
             users.findOne({'user': req.session.user}, function(err, docs) {
+                if(!docs) {
+                    err = "Nonexistent user";
+                }
                 callback(err, docs);
             });
         },
@@ -63,6 +72,76 @@ router.post('/new', function(req, res, next) {
     function(err, result) {
         if(err) {
             res.status(500);
+            res.send(err);
+            return;
+        }
+        res.send(result);
+    });
+});
+
+router.put('/note/:id', function(req, res, next) {
+    if(!req.session.user) {
+        res.status(401);
+        res.send("Not logged in");
+        return;
+    }
+    if(db == null) {
+        res.status(500);
+        res.send("No mongo connection, please try again later");
+        return;
+    }
+    /*
+     * Check if user exists
+     * Get note and check if user has permissions
+     * Make the change to the note
+     * Hope no races occurred...
+     */
+    async.waterfall([
+        function(callback) {
+            users.findOne({user: req.session.user}, function(err, docs) {
+                if(!docs) {
+                    err = "Nonexistent user";
+                }
+                callback(err, docs);
+            });
+        },
+        function(user, callback) {
+            try {
+                notes.findOne({'_id': ObjectID(req.params.id)}, function(err, docs) {
+                    if(!docs) {
+                        err = "Note not found";
+                        callback(err, docs);
+                        return;
+                    }
+                    if(docs.owner.toString() && docs.owner.toString() == user['_id']) {
+                        callback(err, docs);
+                        return;
+                    }
+                    if(docs.collaborators && docs.collaborators.includes(user['_id'].toString())) {
+                        callback(err, docs);
+                        return;
+                    }
+                    callback('No write access', docs);
+                });
+            }
+            catch(e) {
+                callback(e, null);
+            }
+        },
+        function(prev, callback) {
+            try {
+                notes.updateOne({'_id': ObjectID(req.params.id)}, { $set: {contents: req.body}}, function(err, result) {
+                    callback(err, result);
+                });
+            }
+            catch(e) {
+                callback(e, null);
+            }
+        }
+    ],
+    function(err, result) {
+        if(err) {
+            res.status(400);
             res.send(err);
             return;
         }
