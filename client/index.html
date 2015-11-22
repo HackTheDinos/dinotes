@@ -4,7 +4,7 @@
     <title>Dinotes</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href="./css/main.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css" rel="stylesheet">
+    <link href="bower_components/Materialize/dist/css/materialize.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
@@ -18,11 +18,10 @@
             </ul>
             <ul class="side-nav" id="mobile-demo">
                 <li><a href="#">Link</a></li>
-                        
                 <p>
                     <input type="checkbox" class="filled-in" id="testbox1"/>
                     <label for="testbox1">Add node modules to .gitignore!!! </label>
-                </p> 
+                </p>
                 <p>
                     <input type="checkbox" class="filled-in" id="filled-in-box"/>
                     <label for="filled-in-box">sudo apt-get purge emacs</label>
@@ -110,7 +109,7 @@
                         </div>
                         -->
                     </div>
-                
+
                     <div class="row spec-entry">
                         <div class="card" style="height:100%">
                             <div class="card-content">
@@ -179,7 +178,7 @@
                                 <input type="checkbox" class="filled-in" id="check1"/>
                                 <label for="check1">Add node modules to .gitignore!!! </label>
                                 <span class="badge">Added 6/7/15 6:00PM</span>
-                            </p> 
+                            </p>
                             <p>
                                 <input type="checkbox" class="filled-in" id="check2"/>
                                 <label for="check2">sudo apt-get purge emacs</label>
@@ -197,8 +196,14 @@
 
     </div>
 
-    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <!--  For Electron -->
+    <script>
+      window.$ = window.jQuery = require('./bower_components/jquery/dist/jquery.min.js');
+      window.Hammer = require('./bower_components/Materialize/js/hammer.min.js');
+    </script>
+    <!--  For Normal Broswers -->
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/Materialize/dist/js/materialize.min.js"></script>
     <script src="./js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
 </body>
 </html>
