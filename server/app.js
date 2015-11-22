@@ -7,7 +7,6 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var RedisStore = require('connect-redis')(session);
 
-var routes = require('./routes/index');
 var users = require('./routes/users');
 var notes = require('./routes/notes');
 
@@ -31,7 +30,6 @@ app.use(session({
     resave: false
 }));
 
-app.use('/', routes);
 app.use('/users', users);
 app.use('/notes', notes);
 
