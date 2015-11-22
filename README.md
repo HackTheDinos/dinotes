@@ -22,11 +22,11 @@
 ---
 ## Design Mockups
 ### Desktop
-<img src="assets/desktop/DINOTE-01.png" width=200px">
-<img src="assets/desktop/DINOTE-10.png" width=200px">
-<img src="assets/desktop/DINOTE-11.png" width=200px">
-<img src="assets/desktop/DINOTE-12.png" width=200px">
-<img src="assets/desktop/DINOTE-13.png" width=200px">
+<img src="assets/desktop/DINOTE-01.png" width=500px">
+<img src="assets/desktop/DINOTE-10.png" width=500px">
+<img src="assets/desktop/DINOTE-11.png" width=500px">
+<img src="assets/desktop/DINOTE-12.png" width=500px">
+<img src="assets/desktop/DINOTE-13.png" width=500px">
 ### Mobile
 <img src="assets/mobile/Home_drawer_expeditions.png" width=100px">
 <img src="assets/mobile/Home_drawer_tasks.png" width=100px">
