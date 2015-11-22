@@ -1,0 +1,23 @@
+<div class="row spec-entry">
+    <div class="card" style="height:100%">
+        <div class="card-content">
+           <div class="row">
+                <h5 class="card-title">{{speciman-card-speciman-name}}</h5>
+           </div>
+           <div class="row">
+           <div class="col s8 spec-entry-info">
+                <strong>Date / Time</strong> {{speciman-card-date-collected}} <br>
+                <strong>Location</strong> {{speciman-card-latitude}} Lat {{speciman-card-longitude}} Long (see on map) <br>
+                <strong>Locality</strong> {{speciman-card-locality}} <br>
+                <strong>Notes</strong>
+                <div class="spec-entry-notes">
+                   {{speciman-card-notes}}
+                </div>
+                <strong>Collector</strong> {{speciman-card-collector-name}} <br>
+           </div>
+           <div class="col s4 spec-entry-photos">
+           </div>
+           </div>
+        </div>
+    </div>
+</div>

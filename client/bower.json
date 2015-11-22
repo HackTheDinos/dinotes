@@ -18,6 +18,7 @@
   ],
   "dependencies": {
     "jquery": "~2.1.4",
-    "Materialize": "materialize#~0.97.3"
+    "Materialize": "materialize#~0.97.3",
+    "mustache.js": "mustache#~2.2.0"
   }
 }
