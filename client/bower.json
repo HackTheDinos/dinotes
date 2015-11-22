@@ -17,7 +17,6 @@
     "tests"
   ],
   "dependencies": {
-    "backbone.marionette": "marionette#~2.4.3",
-    "dustjs-linkedin": "~2.7.2"
+    "jquery": "~2.1.4"
   }
 }
