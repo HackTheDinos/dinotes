@@ -15,8 +15,11 @@
                 </div>
                 <strong>Collector</strong> {{speciman-card-collector-name}} <br>
            </div>
+           {{#speciman-card-img}}
            <div class="col s4 spec-entry-photos">
+               <img class="spec-entry-photo materialboxed" src="{{.}}">
            </div>
+           {{/speciman-card-img}}
            </div>
         </div>
     </div>

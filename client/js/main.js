@@ -1,20 +1,28 @@
 $(document).ready(function() {
    var userCardResults;
-
-   // Fetch cards from backend
-   userCardResults = getRecordsFrom('/notes/mine');
-
-   // Remove null records based on a key to check
-   userCardResults = returnValidCards(userCardResults.owned,
-      'speciman-card-speciman-name');
-
-   // Render validated records w/ Mustache into HTML
-   renderMustache(
-      'js/template-speciman-card.mst',
-      userCardResults,
-      '#loaded-speciman-cards');
+   var userInfo;
 
    $(".button-collapse").sideNav();
+
+   $.get('/users/me')
+      .success(function success(result) {
+         var userInfo = result;
+         // Fetch cards from backend
+         userCardResults = getRecordsFrom('/notes/mine');
+
+         // Remove null records based on a key to check
+         userCardResults = returnValidCards(userCardResults.owned,
+            'speciman-card-speciman-name');
+
+         // Render validated records w/ Mustache into HTML
+         renderMustache(
+            'js/template-speciman-card.mst',
+            userCardResults,
+            '#loaded-speciman-cards');
+      })
+      .error(function failure(jqXHR, textStatus, errorThrown) {
+         $('#modal1').openModal();
+      });
 });
 
 /**
@@ -40,7 +48,7 @@ function renderMustache(templatePath, data, divId) {
    var i;
 
    $.get(templatePath, function(template) {
-      for (i = 0; i < data.length; i++) {
+      for (i = data.length - 1; i >= 0; i--) {
          rendered += Mustache.render(template, data[i].contents);
       }
       $(divId).html(rendered);
@@ -49,7 +57,7 @@ function renderMustache(templatePath, data, divId) {
 
 /**
  * remove null records
- * @param  {[Array]} allCards   
+ * @param  {[Array]} allCards
  * @param  {[String]} keyToCheck check this key for null value
  * @return {[Array]}            of valid records
  */
