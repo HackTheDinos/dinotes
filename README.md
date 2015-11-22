@@ -2,7 +2,7 @@
 
 ### Entry for the [Digital Field Book](https://github.com/amnh/HacktheDinos/wiki/Digital-Field-Book) challenge at Hack The Dinos.
 
-### [Try it out here!](http://dinotes.jagels.io/) *Must be on the "Hack the Dino's" wi-fi*
+### [Try it out here!](http://dinotes.jagels.io:3000/) *Must be on the "Hack the Dino's" wi-fi*
 ---
 ## DINOTE is built with
 
@@ -46,4 +46,4 @@ Hacker|Representing|Worked on
 [Emily Goetz](http://github.com/EmilyGoetz)     | Viacom       			| Full Stack
 [Jessica Han](http://jessicahhan.com)           | ADP    			    | Design and UX
 [Tim Hung](http://github.com/AvocadosConstant)	| Binghamton University	| Front-End
-[William Jagels](http://github.com/wijagels) 	| Binghamton University	| Back-End
+[William Jagels](http://github.com/wijagels) 	| Hudson River Trading	| Back-End
