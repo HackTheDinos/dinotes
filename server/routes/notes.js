@@ -249,4 +249,28 @@ router.get('/mine', function(req, res, next) {
     });
 });
 
+router.get('/near', function(req, res, next) {
+    if(db == null) {
+        res.status(500);
+        res.send("No mongo connection, please try again later");
+        return;
+    }
+    if(!req.query.lat || !req.query.lon || !req.query.dist) {
+        res.status(400);
+        res.send("Invalid query, provide lat, lon, and dist");
+        return;
+    }
+    notes.find({
+        "contents.loc": {
+            $near: {
+                $geometry: {type: "Point", coordinates: [parseFloat(req.query.lat), parseFloat(req.query.lon)]},
+                $minDistance: 0,
+                $maxDistance: parseFloat(req.query.dist)
+            }
+        }
+    }).toArray(function(err, docs) {
+        res.send(docs);
+    });
+});
+
 module.exports = router;
