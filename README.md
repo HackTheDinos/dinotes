@@ -5,35 +5,39 @@
 ### [Try it out here!](http://10.20.65.3:3000/) *Must be on the "Hack the Dino's" wi-fi*
 ---
 ## DINOTE is built with
+
 #### Front End
 - Materialize.css
 - JQuery
 - Bower
+
 #### Back End
 - Node.js
 - MongoDB
 - Redis
+
 #### Design
 - Adobe Illustrator
+
 ---
 ## Design Mockups
 ### Desktop
-<img src="assets/desktop/DINOTE-01.png" width=100px">
-<img src="assets/desktop/DINOTE-10.png" width=100px">
-<img src="assets/desktop/DINOTE-11.png" width=100px">
-<img src="assets/desktop/DINOTE-12.png" width=100px">
-<img src="assets/desktop/DINOTE-13.png" width=100px">
+<img src="assets/desktop/DINOTE-01.png" width=200px">
+<img src="assets/desktop/DINOTE-10.png" width=200px">
+<img src="assets/desktop/DINOTE-11.png" width=200px">
+<img src="assets/desktop/DINOTE-12.png" width=200px">
+<img src="assets/desktop/DINOTE-13.png" width=200px">
 ### Mobile
-<img src="assets/mobile/Home_drawer_expeditions.png" width=50px">
-<img src="assets/mobile/Home_drawer_tasks.png" width=50px">
-<img src="assets/mobile/Home_specimens.png" width=50px">
-<img src="assets/mobile/Home_specimens_new.png" width=50px">
-<img src="assets/mobile/Open_Log_In.png" width=50px">
-<img src="assets/mobile/Open_Register.png" width=50px">
-<img src="assets/mobile/Tab_Resources.png" width=50px">
-<img src="assets/mobile/Tab_Resources_upload.png" width=50px">
-<img src="assets/mobile/Tab_Resources_View.png" width=50px">
-<img src="assets/mobile/Tab_sitemap.png" width=50px">
+<img src="assets/mobile/Home_drawer_expeditions.png" width=100px">
+<img src="assets/mobile/Home_drawer_tasks.png" width=100px">
+<img src="assets/mobile/Home_specimens.png" width=100px">
+<img src="assets/mobile/Home_specimens_new.png" width=100px">
+<img src="assets/mobile/Open_Log_In.png" width=100px">
+<img src="assets/mobile/Open_Register.png" width=100px">
+<img src="assets/mobile/Tab_Resources.png" width=100px">
+<img src="assets/mobile/Tab_Resources_upload.png" width=100px">
+<img src="assets/mobile/Tab_Resources_View.png" width=100px">
+<img src="assets/mobile/Tab_sitemap.png" width=100px">
 ---
 ## The Team
 Hacker|Representing|Worked on
