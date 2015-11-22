@@ -1,0 +1,14 @@
+{
+  "name": "electron-dinotes",
+  "version": "1.0.0",
+  "description": "electron version of dinotes",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron-prebuilt": "^0.35.1"
+  }
+}

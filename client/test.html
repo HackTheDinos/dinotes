@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+     <title>Image Capture Test</title>
+     <script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+
+  <body>
+    Image: <input type="file" capture="camera" accept="image/*" id="takePictureField">
+    <img id="yourimage">
+    <br>
+    Name: <input type="text" id="name">
+
+
+    <h6>Submited stuff?</h6>
+    <img id="oldimage">
+
+
+
+    <script>
+      $(document).ready(function() {
+         $("#takePictureField").on("change",gotPic);
+               if (localStorage.getItem('testing') !== null) {
+                  $("#oldimage").attr("src",localStorage.getItem('testing'));
+               }
+      });
+
+    //Credit: https://www.youtube.com/watch?v=EPYnGFEcis4&feature=youtube_gdata_player
+     function gotPic(event) {
+           if(event.target.files.length == 1 &&
+              event.target.files[0].type.indexOf("image/") == 0) {
+               $("#yourimage").attr("src",URL.createObjectURL(event.target.files[0]));
+               console.warn(URL.createObjectURL(event.target.files[0]));
+               var newCard = {};
+
+               if (getLocalId() === null) {
+                  setLocalId();
+               }
+               newCard.specimanCardId = updateLocalId();
+               console.log(newCard);
+
+               if (localStorage.getItem('testing') === null) {
+                  localStorage.setItem('testing', URL.createObjectURL(event.target.files[0]));
+               }
+
+
+           }
+     }
+
+
+     function setLocalId() {
+        localStorage.setItem('specimanCardId', '0');
+     }
+
+     function getLocalId() {
+        return localStorage.getItem('specimanCardId');
+     }
+
+     function updateLocalId() {
+        var newId = parseInt(getLocalId()) + 1;
+        localStorage.setItem('specimanCardId', newId);
+        return newId;
+     }
+
+
+    </script>
+  </body>
+
+</html>
