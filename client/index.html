@@ -244,7 +244,8 @@
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 8,
-                center: {lat: -34.397, lng: 150.644}
+                center: {lat: 42.5900, lng: 103.4300},
+                mapTypeId: google.maps.MapTypeId.SATELLITE
                 });
             // Resize stuff...
             google.maps.event.addDomListener(window, "resize", function() {
