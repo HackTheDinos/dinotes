@@ -18,22 +18,22 @@
 ---
 ## Design Mockups
 ### Desktop
-![](./assets/desktop/DINOTE-01.png=250x?raw=true)
-![](./assets/desktop/DINOTE-10.png=250x?raw=true)
-![](./assets/desktop/DINOTE-11.png=250x?raw=true)
-![](./assets/desktop/DINOTE-12.png=250x?raw=true)
-![](./assets/desktop/DINOTE-13.png=250x?raw=true)
+<img src="assets/desktop/DINOTE-01.png" width=100px">
+<img src="assets/desktop/DINOTE-10.png" width=100px">
+<img src="assets/desktop/DINOTE-11.png" width=100px">
+<img src="assets/desktop/DINOTE-12.png" width=100px">
+<img src="assets/desktop/DINOTE-13.png" width=100px">
 ### Mobile
-![](./assets/mobile/Home_drawer_expeditions.png=50x?raw=true)
-![](./assets/mobile/Home_drawer_tasks.png=50x?raw=true)
-![](./assets/mobile/Home_specimens.png=50x?raw=true)
-![](./assets/mobile/Home_specimens_new.png=50x?raw=true)
-![](./assets/mobile/Open_Log_In.png=50x?raw=true)
-![](./assets/mobile/Open_Register.png=50x?raw=true)
-![](./assets/mobile/Tab_Resources.png=50x?raw=true)
-![](./assets/mobile/Tab_Resources_upload.png=50x?raw=true)
-![](./assets/mobile/Tab_Resources_View.png=50x?raw=true)
-![](./assets/mobile/Tab_sitemap.png=50x?raw=true)
+<img src="assets/mobile/Home_drawer_expeditions.png" width=50px">
+<img src="assets/mobile/Home_drawer_tasks.png" width=50px">
+<img src="assets/mobile/Home_specimens.png" width=50px">
+<img src="assets/mobile/Home_specimens_new.png" width=50px">
+<img src="assets/mobile/Open_Log_In.png" width=50px">
+<img src="assets/mobile/Open_Register.png" width=50px">
+<img src="assets/mobile/Tab_Resources.png" width=50px">
+<img src="assets/mobile/Tab_Resources_upload.png" width=50px">
+<img src="assets/mobile/Tab_Resources_View.png" width=50px">
+<img src="assets/mobile/Tab_sitemap.png" width=50px">
 ---
 ## The Team
 Hacker|Representing|Worked on
