@@ -81,3 +81,10 @@ h5 {
     max-width: 100%; 
     max-height: 500px;
 }
+
+.spec-entry-photo-big {
+    width: 100% !important;
+}
+.spec-entry-photo {
+    width: 32% !important;
+}
